@@ -1,19 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <input type="button" value="Sign Auto" />
+    <input type="button" value="Sign via SPA" />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from "vue";
+import { blake2b256 } from "thor-devkit/dist/cry/blake2b";
+import { randomBytes } from "crypto";
 
 export default Vue.extend({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: "App",
 });
 </script>
 
